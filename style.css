@@ -22,15 +22,15 @@ a:visited {
     color: lightskyblue;
 }
 
-div {
+.bg-div {
     background-color: #00000051;
-    border-radius: 64px;
+    border-radius: 12px;
 }
 
 .app {
     padding: 32px;
     position: absolute;
-    width: 90vw;
+    width: 85vw;
     height: 85vh;
     top: 50%;
     left: 50%;
@@ -38,7 +38,7 @@ div {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 16px;
+    gap: 18px;
 }
 
 .profile {
@@ -58,6 +58,7 @@ div {
 
 .description {
     margin-left: 16px;
+    font-size: 18px;
 }
 
 .name {
@@ -70,12 +71,13 @@ div {
 
 .commissions {
     grid-column-start: 3;
-    grid-column-end: 4;
+    grid-column-end: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 24px;
     padding: 12px;
+    text-align: center;
 }
 
 .projects {
@@ -83,10 +85,13 @@ div {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 5;
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    text-align: center;
+}
+
+.projectlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
 }
 
 .projects .divider {
@@ -98,17 +103,21 @@ div {
     border-radius: 16px;
 }
 
-.projects .title {
+.title {
     text-align: center;
     font-size: 48px;
+    font-weight: 600;
 }
 
-.projects {
-    text-align: center;
+.project {
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 6px;
 }
 
 #theme-switch {
-    margin: 6px;
+    margin: 18px 16px;
     background-color: #00000051;
     border-radius: 100%;
     cursor: pointer;
@@ -120,15 +129,19 @@ div {
 
 body.light-theme span,
 body.light-theme h1,
-body.light-theme h2 {
+body.light-theme h2,
+body.light-theme h3,
+body.light-theme h4,
+body.light-theme p {
     color: black;
 }
 
-body.light-theme div {
+body.light-theme .bg-div {
     background-color: #00000051;
 }
 
 body.light-theme {
+    color: black;
     background-color: azure;
 }
 
@@ -136,14 +149,18 @@ body.light-theme {
 
 body.dark-theme span,
 body.dark-theme h1,
-body.dark-theme h2 {
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme p {
     color: white;
 }
 
-body.dark-theme div {
+body.dark-theme .bg-div {
     background-color: #ffffff21;
 }
 
 body.dark-theme {
     background-color: #212121;
+    color: white;
 }
